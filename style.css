@@ -214,12 +214,12 @@ p {
 
 .logo {
     position: absolute;
-    left: 30px;
+    left: 20px;
     /* Zmień na wartość marginesu, jaką chcesz */
     top: 50%;
     transform: translateY(-50%);
-    width: 40px;
-    height: 40px;
+    width: 34px;
+    height: 34px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -236,13 +236,13 @@ p {
 }
 */
 .logo img {
-    width: 40px;
-    height: 40px;
+    width: 34px;
+    height: 34px;
 }
 
 .contact-me {
     position: absolute;
-    right: 30px;
+    right: 20px;
     /* Zmień na wartość marginesu, jaką chcesz */
     top: 50%;
     transform: translateY(-50%);
@@ -409,7 +409,7 @@ p {
 
 .insta {
     position: absolute;
-    left: 30px;
+    left: 20px;
     /* Zmień na wartość marginesu, jaką chcesz */
     top: 50%;
     transform: translateY(-50%);
@@ -437,7 +437,7 @@ p {
 */
 .about-me {
     position: absolute;
-    right: 30px;
+    right: 20px;
     /* Zmień na wartość marginesu, jaką chcesz */
     top: 50%;
     transform: translateY(-50%);
