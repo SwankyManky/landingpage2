@@ -1,0 +1,720 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Meander';
+    src: url('fonts/Meander_4.30-Regular.otf') format('opentype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Meander';
+    src: url('fonts/Meander_4.30-Medium.otf') format('opentype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Meander';
+    src: url('fonts/Meander_4.30-Semibold.otf') format('opentype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Meander';
+    src: url('fonts/Meander_4.30-Bold.otf') format('opentype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Meander';
+    src: url('fonts/Meander_4.30-Light.otf') format('opentype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Meander';
+    src: url('fonts/Meander_4.30-Extralight.otf') format('opentype');
+    font-weight: 200;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 400;
+}
+
+body {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100svw;
+    height: 100svh;
+    overflow: hidden;
+    line-height: 1;
+    flex-wrap: wrap;
+    font-family: Meander;
+    /* 'Avenir', sans-serif; */
+    font-size: 14px;
+}
+
+p {
+    font-weight: 300;
+}
+
+.header {
+    position: relative;
+    width: 100svw;
+    height: 8svh;
+    overflow: hidden;
+    letter-spacing: 1px;
+}
+
+/*
+.header {
+    position: relative;
+    width: 100svw;
+    height: 8svh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    letter-spacing: 1px;
+}
+*/
+.content {
+    position: relative;
+    width: 100svw;
+    height: 84svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    /* border-top: 1px solid lightgray; */
+    /*border-bottom: 1px solid lightgray;*/
+}
+
+/*
+.footer {
+    position: relative;
+    width: 100svw;
+    height: 8svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    letter-spacing: 1px;
+
+}
+*/
+.footer {
+    position: relative;
+    width: 100svw;
+    height: 8svh;
+    overflow: hidden;
+    letter-spacing: 1px;
+}
+
+
+.logo {
+    position: absolute;
+    left: 30px;
+    /* Zmień na wartość marginesu, jaką chcesz */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*
+.logo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8svh;
+    height: 8svh;
+}
+*/
+.logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.contact-me {
+    position: absolute;
+    right: 30px;
+    /* Zmień na wartość marginesu, jaką chcesz */
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*
+.contact-me {
+    position: relative;
+    width: 10svw;
+    height: 5svh;
+}
+*/
+#contact-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+
+#contact-btn:hover {
+    color: lightgray;
+
+}
+
+#menu-contact-me.menu-open {
+    right: 0;
+    transform: translateX(0);
+}
+
+#menu-contact-me {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 30svw;
+    height: 100svh;
+    top: 0;
+    right: -30svw;
+    background: #E6E6E6;
+    z-index: 1;
+    transition: right 0.3s ease;
+    transform: translateX(100%);
+}
+
+.contact-me-text {
+    position: relative;
+    width: auto;
+    height: auto;
+    line-height: 31.5px;
+    letter-spacing: normal;
+    font-size: 14px;
+}
+
+#menu-about-me.menu-open {
+    right: 0;
+    transform: translateX(0);
+}
+
+#menu-about-me {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 30svw;
+    height: 100svh;
+    top: 0;
+    right: -30svw;
+    background: #E6E6E6;
+    z-index: 1;
+    transition: right 0.3s ease;
+    font-weight: 400;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    transform: translateX(100%);
+}
+
+.photo-me {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0px;
+    width: 15svw;
+    height: auto;
+    overflow: hidden;
+}
+
+.photo-me img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-me-text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    top: 10%;
+    width: 100%;
+    height: auto;
+    line-height: 31.5px;
+    letter-spacing: normal;
+    /* border: 1px solid grey;*/
+}
+
+.about-me-text .inner {
+    position: relative;
+    width: 100%;
+    padding: 20px 40px 20px 40px;
+    /* border-bottom: 1px solid #ccc; */
+    flex: 1;
+}
+
+
+#close-btn {
+    position: absolute;
+    top: 50px;
+    right: 80px;
+    width: auto;
+    height: auto;
+    transition: 0.2s;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+#close-btn:hover {
+    color: white;
+}
+
+#close-btn2 {
+    position: absolute;
+    top: 50px;
+    right: 80px;
+    width: auto;
+    height: auto;
+    transition: 0.2s;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+#close-btn2:hover {
+    color: white;
+}
+
+/*
+.insta {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8svh;
+    height: 8svh;
+}
+*/
+
+.insta {
+    position: absolute;
+    left: 30px;
+    /* Zmień na wartość marginesu, jaką chcesz */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.insta img {
+    width: 20px;
+    height: 20px;
+}
+
+
+/*
+.about-me {
+    position: relative;
+    width: 10svw;
+    height: 5svh;
+}
+*/
+.about-me {
+    position: absolute;
+    right: 30px;
+    /* Zmień na wartość marginesu, jaką chcesz */
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*
+.fonts {
+    position: relative;
+    width: 5svw;
+    height: 5svh;
+}
+*/
+.fonts {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#about-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+#about-btn:hover {
+    color: lightgray;
+}
+
+#fonts-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+#fonts-btn:hover {
+    color: lightgray;
+}
+
+.video {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.video video {
+    /*position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;*/
+    width: 100%;
+    height: 100%;
+    /* Rozciąga wideo na całą szerokość i wysokość kontenera */
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+.link {
+    display: block;
+    color: #000;
+    text-decoration: none;
+    margin: 20px 0px;
+    transition: background-color 0.3s, color 0.3s;
+    /* border: 1px solid transparent; */
+    border-radius: 5px;
+    font-weight: 400;
+}
+
+.link:hover {
+    color: lightgray;
+}
+
+/* Mobilki mobilki - ogólne */
+@media (max-width: 768px) {
+
+    html {
+        overflow: hidden;
+    }
+
+    body {
+        width: 100svw;
+        max-width: 100svw;
+        height: 100svh;
+        max-height: 100svh;
+    }
+
+    .header {
+        max-width: 100svw;
+        font-size: 13px;
+    }
+
+    #contact-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        transition: 0.2s;
+        cursor: pointer;
+    }
+
+    .content {
+        width: 100svw;
+        max-width: 100svw;
+        height: 84svh;
+        max-height: 84svh;
+    }
+
+
+    .footer {
+        width: 100svw;
+        max-width: 100svw;
+        font-size: 13px;
+    }
+
+
+    .contact-me {
+        width: auto;
+        height: auto;
+    }
+
+
+    #menu-contact-me {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100svw;
+        height: 100svh;
+        right: -100svw;
+    }
+
+    #contact-btn {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .contact-me-text {
+        position: relative;
+        width: auto;
+        height: auto;
+        text-align: center;
+        line-height: 31.5px;
+        letter-spacing: normal;
+        font-size: 18px;
+    }
+
+    #close-btn {
+        position: absolute;
+        top: 50px;
+        right: 0px;
+        width: 100svw;
+        text-align: center;
+        font-size: 18px;
+    }
+
+
+    #menu-about-me {
+        width: 100svw;
+        height: 100svh;
+        top: 0;
+        right: -100svw;
+    }
+
+
+    .about-me-text .inner {
+        padding: 15px 25px 15px 25px;
+    }
+
+    .photo-me {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -20px;
+        width: 50svw;
+        max-width: 50svw;
+        height: auto;
+        overflow: hidden;
+    }
+
+
+    .photo-me img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .about-me {
+        width: auto;
+        height: auto;
+    }
+
+    #about-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        transition: 0.2s;
+        cursor: pointer;
+    }
+
+    #close-btn2 {
+        position: absolute;
+        top: 50px;
+        right: 0px;
+        width: 100svw;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .video {
+        position: relative;
+        width: 80svw;
+        height: 80svw;
+    }
+
+    .video video {
+        position: relative;
+        width: 80svw;
+        height: 80svw;
+    }
+
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media (min-width: 768px) and (max-width: 1000px) {
+    .header {
+        height: 10svh;
+    }
+
+    .content {
+        height: 80svh;
+        max-height: 80svh;
+    }
+
+    .about-me-text {
+        top: 25%;
+    }
+
+    .footer {
+        height: 10svh;
+    }
+
+    .video {
+        width: 80svw;
+        height: 80svw;
+    }
+
+    .video video {
+        width: 80svw;
+        height: 80svw;
+    }
+}
