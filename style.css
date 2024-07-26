@@ -696,12 +696,12 @@ p {
 /*Landscape*/
 @media (min-width: 768px) and (max-width: 1000px) {
     .header {
-        height: 10svh;
+        height: 15svh;
     }
 
     .content {
-        height: 80svh;
-        max-height: 80svh;
+        height: 70svh;
+        max-height: 70svh;
     }
 
     .about-me-text {
@@ -713,7 +713,7 @@ p {
     }
 
     .footer {
-        height: 10svh;
+        height: 15svh;
     }
 
     .video {
