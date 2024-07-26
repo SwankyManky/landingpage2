@@ -302,6 +302,7 @@ p {
     line-height: 31.5px;
     letter-spacing: normal;
     font-size: 14px;
+    text-align: center;
 }
 
 #menu-about-me.menu-open {
@@ -349,7 +350,7 @@ p {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    top: 10%;
+    top: 13%;
     width: 100%;
     height: auto;
     line-height: 31.5px;
@@ -689,7 +690,7 @@ p {
 
 }
 
-/* Extra small devices (phones, 600px and down) */
+/*Landscape*/
 @media (min-width: 768px) and (max-width: 1000px) {
     .header {
         height: 10svh;
@@ -704,17 +705,21 @@ p {
         top: 25%;
     }
 
+    .about-me-text .inner {
+        padding: 10px 20px 10px 20px;
+    }
+
     .footer {
         height: 10svh;
     }
 
     .video {
-        width: 80svw;
+        width: 100svw;
         height: 80svw;
     }
 
     .video video {
-        width: 80svw;
+        width: 100svw;
         height: 80svw;
     }
 }
