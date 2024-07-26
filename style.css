@@ -629,6 +629,9 @@ p {
         right: -100svw;
     }
 
+    .about-me-text {
+        top: 100px;
+    }
 
     .about-me-text .inner {
         padding: 15px 25px 15px 25px;
